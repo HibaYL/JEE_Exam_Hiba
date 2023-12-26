@@ -1,0 +1,26 @@
+type Query {
+    getUserByEmail(email: String): User,
+    getUserByDateNaissance(Naissance: String): User
+}
+
+type Mutation {
+    saveUser(user: UserDTO): User,
+    deleteUser(id: ID!): User
+}
+
+input UserDTO {
+    name: String,
+    email: String,
+    Naissance: String,
+    password: String,
+}
+
+type User {
+    id_User: ID,
+    name: String,
+    email: String,
+    Naissance: String
+}
+
+
+
